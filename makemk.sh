@@ -8,8 +8,8 @@
 
 # change these defines as appropriate here or in mkconfig
 # ROOT should be the root of the Inferno tree
-ROOT=/usr/inferno
-SYSTARG=FreeBSD
+ROOT=$HOME/go/src/github.com/doublec/inferno
+SYSTARG=MacOSX
 OBJTYPE=386
 SYSTYPE=posix
 
@@ -19,7 +19,7 @@ grep -s 'SYSTARG=Plan9' mkconfig || . ./mkconfig
 PLAT=$ROOT/$SYSTARG/$OBJTYPE
 
 # you might need to adjust the CC, LD, AR, and RANLIB definitions after this point
-CC="p gcc -m32 -c -I$PLAT/include -I$ROOT/include -I$ROOT/utils/include"
+CC="p gcc -m32 -c -I$PLAT/include -I$ROOT/include -I$ROOT/utils/include -I$HOME/go/src/github.com/doublec/inferno/MacOSX/386/include"
 LD="p gcc -m32"
 AR="p ar crvs"
 RANLIB=":"	# some systems still require `ranlib'

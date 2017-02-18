@@ -17,7 +17,7 @@ ASFLAGS= -mmacosx-version-min=$MACVER
 
 ISYSROOT=	-isysroot /Developer/SDKs/MacOSX$MACVER.sdk
 
-CC=		llvm-gcc cc -c -m32
+CC=		llvm-gcc -c -m32
 COPTFLAGS=	-Os
 CDEBUGFLAGS=
 CTHREADFLAGS=
